@@ -22,14 +22,15 @@ fn main() {
 
             io::stdin().read_line(&mut input).expect("Error.");
 
-            let input: f64 = match input.trim().parse() {
+            let input: f32 = match input.trim().parse() {
                 Ok(num) => num,
                 Err(_) => continue
             };
 
-            let result: f64 = (input - 32.0) / 1.8;
+            let result: f32 = (input - 32.0) / 1.8;
 
-            println!("The result is: {result}.")
+            println!("The result is: {result}.");
+            break;
         }
     else {
         println!("Input 1 for F-C and 2 for C-F.");
